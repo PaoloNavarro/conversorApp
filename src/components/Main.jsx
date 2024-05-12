@@ -5,6 +5,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from "../pages/HomeScreen";
 import AboutUsScreen from "../pages/AboutUsScreen";
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import ForwardedToast from '../components/ForwardedToast'; // Importa el componente ForwardedToast
+//import * as SystemUI from 'expo-system-ui';
+//const color = await SystemUI.getBackgroundColorAsync();
 
 
 const Tab = createBottomTabNavigator();
@@ -33,6 +36,7 @@ export default function App() {
         <Tab.Screen name="Inicio" component={HomeScreen} />
         <Tab.Screen name="Sobre nostros" component={AboutUsScreen} />
       </Tab.Navigator>
+      <ForwardedToast />    
     </NavigationContainer>
   );
 }
